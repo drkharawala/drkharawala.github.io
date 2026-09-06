@@ -1,0 +1,91 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { SITE_DATA } from '../constants';
+
+import '../styles/about.css';
+import '../styles/publications.css';
+
+const publications = [
+    ['Optimizing Cardiac Imaging Protocols: Best Practices for Climate Sustainability', 'Kharawala A, Pargaonkar S, Satyavolu B, et al.', 'Current Cardiovascular Imaging Reports', 2026, '10.1007/s12410-026-09615-8', 'Review'],
+    ['Oral PCSK9 inhibitors for elevated LDL-C: A systematic review and meta-analysis of randomized trials', 'Karthikeyan A, Karp A, Maliha M, Kharawala A, et al.', 'American Journal of Preventive Cardiology', 2026, '10.1016/j.ajpc.2026.101659', 'Meta-analysis'],
+    ['Multidimensional Social Adversity and Mortality in People With HIV Infection and Heart Failure', 'Chen YY, Borkowski P, Biavati L, Nazarenko N, Parker M, Kharawala A, et al.', 'Circulation', 2026, '10.1161/CIRCULATIONAHA.126.078897', 'Original research'],
+    ['Racial differences in people living with HIV and Heart Failure', 'Borkowski P, Biavati L, Nazarenko N, Parker M, Kharawala A, et al.', 'PLOS One', 2026, '10.1371/journal.pone.0343710', 'Original research'],
+    ['Advocacy Priorities of the American College of Cardiology at the 2025 Legislative Conference', 'Kharawala A, Winchester D, Bortnick AE', 'JACC: Advances', 2026, '10.1016/j.jacadv.2026.102586', 'Professional perspective'],
+    ['Patient-Centered Communication Training and COVID-19 Vaccine Uptake in Underserved Outpatients', 'Chen YY, Wang YH, Jarrin Jara MD, Kharawala A, Gutwein A', 'Journal of General Internal Medicine', 2026, '10.1007/s11606-025-10120-9', 'Original research'],
+    ['Gender Disparities Among Cardiovascular Disease Program Directors in the United States', 'Arvind S, Kumar SS, Kaushik S, Maliha M, Satish V, Kharawala A, et al.', 'JACC: Advances', 2025, '10.1016/j.jacadv.2025.102197', 'Original research'],
+    ['Assessment of the Utilization of Lipoprotein(a) and its Relationship with Cardiovascular Outcomes', 'Maliha M, Nazarenko N, Nagraj S, Satish V, Kharawala A, et al.', 'Heart Views', 2025, '10.4103/heartviews.heartviews_138_24', 'Original research'],
+    ['Role of Artificial Intelligence in the Diagnosis and Management of Pulmonary Embolism', 'Naser AM, Vyas R, Morgan AA, Kalaiger AM, Kharawala A, et al.', 'Diagnostics', 2025, '10.3390/diagnostics15070889', 'Review'],
+    ['Role of Embolic Protection in Percutaneous Coronary Intervention Without Saphenous Venous Graft Lesions in STEMI', 'Maliha M, Satish V, Chi KY, Zeas DB, Kharawala A, et al.', 'Critical Pathways in Cardiology', 2025, '10.1097/HPC.0000000000000376', 'Meta-analysis'],
+    ['The Safety Profile of Inclisiran in Patients with Dyslipidemia', 'Maliha M, Satish V, Kumar SS, Chi KY, Shama N, Kharawala A, et al.', 'Healthcare', 2025, '10.3390/healthcare13020141', 'Meta-analysis'],
+    ['Cardiac Critical Care of the Cardio-Obstetric Patient', 'Kharawala A, Nagraj S, Setia G, Reynolds D, Thachil R', 'Journal of Intensive Care Medicine', 2025, '10.1177/08850666241308207', 'Review'],
+    ['Catheter Ablation of Atrial Fibrillation in Infiltrative Cardiomyopathies', 'Satish V, Maliha M, Chi KY, Kharawala A, et al.', 'Journal of Cardiovascular Electrophysiology', 2025, '10.1111/jce.16487', 'Review'],
+    ['Sex differences in Chronic Thromboembolic Pulmonary Hypertension', 'Mangeshkar S, Borkowski P, Singh N, Zoumpourlis P, Maliha M, Nagraj S, Kharawala A, et al.', 'Future Cardiology', 2024, '10.1080/14796678.2024.2385872', 'Review'],
+    ['Obesity and Transcatheter Aortic Valve Replacement', 'Seo J, Kharawala A, Borkowski P, Singh N, Akunor H, et al.', 'Journal of Cardiovascular Development and Disease', 2024, '10.3390/jcdd11060169', 'Review'],
+    ['Donation After Circulatory Death Heart Transplant: Current State and Future Directions', 'Kharawala A, Nagraj S, Seo J, Pargaonkar S, Uehara M, et al.', 'Circulation: Heart Failure', 2024, '10.1161/CIRCHEARTFAILURE.124.011678', 'Review'],
+    ['Acute Hemodynamic Compromise After Transcatheter Aortic Valve Replacement Due to Dynamic Left Ventricle Obstruction', 'Barzallo D, Torrado J, Benites-Moya CJ, Sturla M, Kharawala A, et al.', 'American Journal of Cardiology', 2024, '10.1016/j.amjcard.2023.12.005', 'Systematic review'],
+    ['Comparison of in-hospital outcomes and complications of leadless and transvenous pacemaker implantation', 'Alhuarrat MAD, Kharawala A, Renjithlal S, et al.', 'Europace', 2023, '10.1093/europace/euad269', 'Original research'],
+    ['Pulmonary Embolism in Women: A Systematic Review of the Current Literature', 'Thachil R, Nagraj S, Kharawala A, Sokol SI', 'Journal of Cardiovascular Development and Disease', 2022, '10.3390/jcdd9080234', 'Systematic review'],
+    ['Current Advancement in Diagnosing Atrial Fibrillation by Utilizing Wearable Devices and Artificial Intelligence', 'Wang YC, Xu X, Hajra A, Apple S, Kharawala A, et al.', 'Diagnostics', 2022, '10.3390/diagnostics12030689', 'Review']
+];
+---
+
+<Layout pageTitle="Research" description="Research interests, current projects, publications, and presentations by Amrin Kharawala, MD.">
+    <div class="page-container">
+        <h1>Research</h1>
+
+        <div class="info-card">
+            <p>My work spans preventive cardiology, cardiovascular imaging, women's cardiovascular health, pulmonary vascular disease, health equity, and evidence synthesis.</p>
+            <a href={`https://scholar.google.com/citations?user=${SITE_DATA.scholar}`} class="info-card-link" target="_blank" rel="noopener noreferrer" aria-label="Visit Google Scholar profile">
+                <svg viewBox="0 0 24 24" width="60" height="60" fill="currentColor">
+                    <path d="M12 2L1 7l11 5 9-4.09V17h2V7L12 2z"></path>
+                    <path d="M19 11v6c0 1.66-3.13 3-7 3s-7-1.34-7-3v-6l7 3 7-3z"></path>
+                </svg>
+                <span>Google Scholar</span>
+            </a>
+        </div>
+
+        <section>
+            <h2>Current projects</h2>
+            <ul class="custom-list">
+                <li><span class="list-item-title">Exercise-induced pulmonary hypertension</span><span class="list-item-description">Comparative effectiveness of riociguat and sildenafil in a single-center retrospective study.</span></li>
+                <li><span class="list-item-title">Atrial fibrillation and myocardial infarction</span><span class="list-item-description">Systematic review and meta-analysis comparing paroxysmal and non-paroxysmal atrial fibrillation.</span></li>
+                <li><span class="list-item-title">Extra-coronary calcification and cognition</span><span class="list-item-description">Analysis of cognitive measures in the Multi-Ethnic Study of Atherosclerosis.</span></li>
+                <li><span class="list-item-title">Cardiovascular risk prediction in women</span><span class="list-item-description">Collaborative manuscript work through the American Society of Preventive Cardiology.</span></li>
+                <li><span class="list-item-title">Women in cardiovascular clinical trials</span><span class="list-item-description">Work examining how under-representation affects cardiovascular disease prevention and treatment.</span></li>
+            </ul>
+        </section>
+
+        <section class="publications-section">
+            <h2>Selected peer-reviewed publications</h2>
+            <p class="results-info">The <a href={`${import.meta.env.BASE_URL}cv/`}>CV</a> and <a href={`https://scholar.google.com/citations?user=${SITE_DATA.scholar}`} target="_blank" rel="noopener noreferrer">Google Scholar profile</a> contain the complete publication history.</p>
+            <div class="publications-list">
+                {publications.map((publication, index) => (
+                    <article class="publication-card visible">
+                        <div class="pub-number">{index + 1}</div>
+                        <div class="pub-content">
+                            <h3 class="pub-title"><a href={`https://doi.org/${publication[4]}`} target="_blank" rel="noopener noreferrer">{publication[0]}</a></h3>
+                            <p class="pub-authors">{publication[1]}</p>
+                            <div class="pub-meta">
+                                <span class="pub-journal">{publication[2]}</span>
+                                <span class="pub-year">{publication[3]}</span>
+                                <span class="pub-type">{publication[5]}</span>
+                                <a href={`https://doi.org/${publication[4]}`} class="pub-doi" target="_blank" rel="noopener noreferrer">DOI</a>
+                            </div>
+                        </div>
+                    </article>
+                ))}
+            </div>
+        </section>
+
+        <section>
+            <h2>Selected presentations and scholarly writing</h2>
+            <ul class="custom-list">
+                <li><span class="list-item-title">Delivery planning in a high-risk patient with peripartum cardiomyopathy</span><span class="list-item-description">Oral presentation, American College of Cardiology Nebraska Chapter, 2025.</span></li>
+                <li><span class="list-item-title">Efficacy of cardioprotective drugs in patients receiving anthracyclines</span><span class="list-item-description">Oral presentation and best systematic review and meta-analysis award, American College of Cardiology Nebraska Chapter, 2024.</span></li>
+                <li><span class="list-item-title">Comparative effectiveness of riociguat versus sildenafil in exercise-induced pulmonary hypertension</span><span class="list-item-description">Poster presentation, American College of Cardiology Scientific Session, 2026.</span></li>
+                <li><span class="list-item-title">Inverse association of extra-coronary calcification with cognitive measures</span><span class="list-item-description">Poster presentation, American College of Cardiology Scientific Session, 2025.</span></li>
+                <li><span class="list-item-title">Stepping out of the clinic and onto the Hill</span><span class="list-item-description">American College of Cardiology Cardiology Magazine, December 2025.</span></li>
+            </ul>
+        </section>
+    </div>
+</Layout>

@@ -1,0 +1,21 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+import '../styles/cv.css';
+---
+
+<Layout pageTitle="CV" description="Curriculum vitae for Amrin Kharawala, MD.">
+    <div class="page-container cv-page">
+        <div class="cv-heading">
+            <div>
+                <h1>Curriculum Vitae</h1>
+                <p>Amrin Kharawala, MD</p>
+            </div>
+            <a href={`${import.meta.env.BASE_URL}files/Amrin-Kharawala-CV.pdf`} target="_blank" rel="noopener noreferrer">Open or download CV</a>
+        </div>
+
+        <iframe src={`${import.meta.env.BASE_URL}files/Amrin-Kharawala-CV.pdf#view=FitH`} title="Amrin Kharawala curriculum vitae">
+            <p>Your browser cannot display the embedded PDF. <a href={`${import.meta.env.BASE_URL}files/Amrin-Kharawala-CV.pdf`}>Open the CV directly.</a></p>
+        </iframe>
+    </div>
+</Layout>

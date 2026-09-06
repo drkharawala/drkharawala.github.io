@@ -1,0 +1,33 @@
+{
+  "name": "drkharawala-com",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Professional cardiology and academic portfolio for Amrin Kharawala, MD",
+  "keywords": [
+    "astro",
+    "template",
+    "academic",
+    "researcher",
+    "portfolio",
+    "publications",
+    "scholar",
+    "scientist",
+    "cv",
+    "resume"
+  ],
+  "license": "MIT",
+  "author": "Amrin Kharawala",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/drkharawala/drkharawala.github.io"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "astro": "^7.3.1"
+  }
+}

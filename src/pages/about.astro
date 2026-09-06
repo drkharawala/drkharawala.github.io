@@ -1,0 +1,113 @@
+---
+import { Image } from 'astro:assets';
+import Layout from '../layouts/Layout.astro';
+import { SITE_DATA } from '../constants';
+import portraitImage from '../assets/amrin-kharawala.jpg';
+
+import '../styles/about.css';
+---
+
+<Layout pageTitle="About" description="Clinical training, academic interests, and professional background for Amrin Kharawala, MD.">
+    <div class="page-container">
+        <h1>About me</h1>
+
+        <div class="about-content">
+            <div class="about-intro-wrapper centered-column">
+                <div class="about-header centered-column">
+                    <Image src={portraitImage} alt={SITE_DATA.name} class="about-portrait" />
+                    <h2 class="about-name">{SITE_DATA.name}</h2>
+                </div>
+
+                <p class="intro-text">
+                    I am a cardiovascular medicine fellow at the University of Nebraska Medical Center and an ABIM-certified internist.
+                    My clinical and academic interests include preventive cardiology, women's cardiovascular health, multimodality imaging, pulmonary hypertension, heart failure, and health equity.
+                    I combine clinical training with outcomes research, evidence synthesis, professional service, mentorship, and cardiovascular advocacy.
+                </p>
+            </div>
+
+            <section>
+                <h2>Clinical and research focus</h2>
+                <ul class="custom-list">
+                    <li>
+                        <span class="list-item-title">Preventive cardiology</span>
+                        <span class="list-item-description">Cardiovascular risk assessment, lipid management, prevention science, and implementation of evidence-based prevention.</span>
+                    </li>
+                    <li>
+                        <span class="list-item-title">Women's cardiovascular health</span>
+                        <span class="list-item-description">Cardio-obstetrics, sex-based differences in cardiovascular care, clinical-trial representation, and practical care pathways for women.</span>
+                    </li>
+                    <li>
+                        <span class="list-item-title">Cardiovascular imaging</span>
+                        <span class="list-item-description">Echocardiography, cardiac CT, cardiac MRI, nuclear cardiology, and sustainable imaging practice.</span>
+                    </li>
+                    <li>
+                        <span class="list-item-title">Outcomes and health equity</span>
+                        <span class="list-item-description">Cardiovascular outcomes in diverse populations, diagnostic equity, social adversity, and responsible use of clinical data.</span>
+                    </li>
+                    <li>
+                        <span class="list-item-title">Pulmonary vascular and critical cardiovascular care</span>
+                        <span class="list-item-description">Pulmonary hypertension, pulmonary embolism, heart failure, cardiac critical care, and complex hemodynamic disease.</span>
+                    </li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Training</h2>
+                <ul class="work-list icon-list">
+                    <li>
+                        <div class="list-entry">
+                            <h3>Cardiovascular Medicine Fellow</h3>
+                            <p class="institution">University of Nebraska Medical Center, Omaha, Nebraska</p>
+                            <p>July 2024 - present</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="list-entry">
+                            <h3>Internal Medicine Resident</h3>
+                            <p class="institution">Jacobi Medical Center, Albert Einstein College of Medicine, New York City Health + Hospitals</p>
+                            <p>July 2021 - June 2024</p>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Education</h2>
+                <ul class="education-list icon-list">
+                    <li>
+                        <div class="education-entry">
+                            <h3>Bachelor of Medicine and Bachelor of Surgery</h3>
+                            <p class="institution">Medical College, Baroda and S.S.G. Hospital, The Maharaja Sayajirao University of Baroda</p>
+                            <p class="grade">Medical student and intern, August 2013 - February 2019; graduation January 2020</p>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Certification and licensure</h2>
+                <ul class="custom-list">
+                    <li>
+                        <span class="list-item-title">American Board of Internal Medicine</span>
+                        <span class="list-item-description">Board certified in Internal Medicine, October 2024 - present</span>
+                    </li>
+                    <li>
+                        <span class="list-item-title">Nebraska State Physician License</span>
+                        <span class="list-item-description">July 2024 - present</span>
+                    </li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Professional societies</h2>
+                <p>I participate in the American College of Cardiology, American Society of Preventive Cardiology, American Society of Nuclear Cardiology, American Society of Echocardiography, and National Lipid Association.</p>
+            </section>
+
+            <section>
+                <h2>Contact</h2>
+                <p>For academic collaboration, speaking, mentorship, or research inquiries, contact me by <a href={`mailto:${SITE_DATA.email}`}>email</a> or connect through <a href={`https://linkedin.com/in/${SITE_DATA.linkedin}`} target="_blank" rel="noopener noreferrer">LinkedIn</a>.</p>
+                <p>This professional website provides general information and does not provide medical advice or establish a physician-patient relationship.</p>
+            </section>
+        </div>
+    </div>
+</Layout>

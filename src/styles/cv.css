@@ -1,0 +1,47 @@
+.cv-page {
+    width: 100%;
+}
+
+.cv-heading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.cv-heading h1 {
+    margin-bottom: 0.25rem;
+}
+
+.cv-heading p,
+.cv-heading a {
+    color: var(--color-text-muted);
+}
+
+.cv-heading a {
+    flex-shrink: 0;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.cv-page iframe {
+    display: block;
+    width: 100%;
+    height: calc(100vh - 12rem);
+    min-height: 46rem;
+    border: 1px solid var(--color-border);
+    background: #fff;
+}
+
+@media (max-width: 636px) {
+    .cv-heading {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .cv-page iframe {
+        min-height: 34rem;
+    }
+}
