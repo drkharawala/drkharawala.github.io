@@ -6,6 +6,13 @@
     margin-top: 3rem;
 }
 
+.research-profile-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
 /* Controls Wrapper & Toggle */
 .controls-wrapper {
     position: relative;
