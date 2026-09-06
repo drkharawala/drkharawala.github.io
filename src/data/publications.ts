@@ -44,3 +44,7 @@ export const publications = [
     ['Non-Invasive Management of H1N1 Influenza Cases: A Study from Western India', 'Shastri M, Kharawala A, Bhavsar S, Jani J, Thakar D, Shringarpure K', 'International Journal of Internal Medicine', 2020, '10.5923/j.ijim.20200902.01', ''],
     ['Endoscopic reduction of gastric volvulus in a patient with hiatal hernia', 'Kharawala A, McCain J, Ruff K', 'European Journal of Medical Case Reports', 2020, '10.24911/ejmcr/173-1593504015', ''],
 ] as const;
+
+export const corrections = [
+    ['Role of Embolic Protection in Percutaneous Coronary Intervention Without Saphenous Venous Graft Lesions in ST-Segment-Elevation Myocardial Infarction: A Systematic Review and Meta-Analysis: Erratum', 'Maliha M, Satish V, Chi KY, Zeas DB, Kharawala A, et al.', 'Critical Pathways in Cardiology', 2025, '10.1097/HPC.0000000000000389', '40203152'],
+] as const;

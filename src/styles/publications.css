@@ -13,6 +13,10 @@
     flex-wrap: wrap;
 }
 
+.corrections-heading {
+    margin-top: 2.5rem;
+}
+
 /* Controls Wrapper & Toggle */
 .controls-wrapper {
     position: relative;

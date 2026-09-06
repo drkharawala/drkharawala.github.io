@@ -1,7 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { SITE_DATA } from '../constants';
-import { publications } from '../data/publications';
+import { corrections, publications } from '../data/publications';
 
 import '../styles/about.css';
 import '../styles/publications.css';
@@ -58,6 +58,26 @@ import '../styles/publications.css';
                                 <span class="pub-year">{publication[3]}</span>
                                 {publication[5] && <a href={`https://pubmed.ncbi.nlm.nih.gov/${publication[5]}/`} class="pub-doi" target="_blank" rel="noopener noreferrer">PubMed</a>}
                                 <a href={`https://doi.org/${publication[4]}`} class="pub-doi" target="_blank" rel="noopener noreferrer">DOI</a>
+                            </div>
+                        </div>
+                    </article>
+                ))}
+            </div>
+
+            <h3 class="corrections-heading">Published correction</h3>
+            <p class="results-info">PubMed indexes one erratum associated with the publication record.</p>
+            <div class="publications-list">
+                {corrections.map((correction) => (
+                    <article class="publication-card visible">
+                        <div class="pub-number">C</div>
+                        <div class="pub-content">
+                            <h3 class="pub-title"><a href={`https://pubmed.ncbi.nlm.nih.gov/${correction[5]}/`} target="_blank" rel="noopener noreferrer">{correction[0]}</a></h3>
+                            <p class="pub-authors">{correction[1]}</p>
+                            <div class="pub-meta">
+                                <span class="pub-journal">{correction[2]}</span>
+                                <span class="pub-year">{correction[3]}</span>
+                                <a href={`https://pubmed.ncbi.nlm.nih.gov/${correction[5]}/`} class="pub-doi" target="_blank" rel="noopener noreferrer">PubMed</a>
+                                <a href={`https://doi.org/${correction[4]}`} class="pub-doi" target="_blank" rel="noopener noreferrer">DOI</a>
                             </div>
                         </div>
                     </article>
