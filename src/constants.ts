@@ -19,7 +19,7 @@ export const SITE_DATA = {
     // Bluesky handle (without the @)
     bluesky: "",
     linkedin: "amrin-kharawala",
-    github: "drkharawala",
+    pubmed: "https://pubmed.ncbi.nlm.nih.gov/?term=Kharawala+A&cauthor_id=35893223",
 
     // Google Scholar ID (found in your Scholar profile URL)
     // Example: https://scholar.google.com/citations?user=YOUR_ID_HERE

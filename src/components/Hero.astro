@@ -2,7 +2,7 @@
 import { Image } from 'astro:assets';
 import SocialIcons from './SocialIcons.astro';
 import portraitImage from '../assets/amrin-kharawala.jpg';
-const { name, tagline, twitter, linkedin, scholar, email } = Astro.props;
+const { name, tagline, twitter, linkedin, pubmed, scholar, email } = Astro.props;
 ---
 
 <section class="hero">
@@ -18,6 +18,7 @@ const { name, tagline, twitter, linkedin, scholar, email } = Astro.props;
         gap="1.5rem"
         twitter={twitter}
         linkedin={linkedin}
+        pubmed={pubmed}
         scholar={scholar}
         email={email}
       />
